@@ -8,8 +8,8 @@ while [[ 1=1 ]]; do
 	fi
 	echo "Executando" $arquivo".c:"
 	echo "---------------------------------------------------"
-	gcc $arquivo.c -o $arquivo.exe && ./$arquivo.exe
-	echo "---------------------------------------------------" 
+	gcc -x c $arquivo.c -o $arquivo.exe && ./$arquivo.exe
+	echo "---------------------------------------------------"
 	read -p "Tecle algo diferente de '0' para executar novamente." -n1 -s tecla
 	echo ""
 done
