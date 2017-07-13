@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//aasdnasdjfisndfijanuif
 typedef struct {
     char nome[60];
     char numero[60];
@@ -14,7 +14,7 @@ void adiciona(Agenda* reg, int i) {
 }
 
 void imprime(Agenda* reg, int i) {
-    printf("\nNome | telefone\n\n");    
+    printf("\nNome | telefone\n\n");
     for (int j = 0; j < i; j++) {
         printf("%s", reg[j].nome);
         printf(" | %s\n", reg[j].numero);
@@ -29,7 +29,7 @@ int main() {
         int escolha;
         printf("Escolha as seguinte opções:\n 1 - Adicionar um novo contato \n 2 - Imprimir todos os contatos \n 3 - Sair da Agenda.\nResposta: ");
         scanf("%d", &escolha);
-        switch(escolha) {       
+        switch(escolha) {
             case 1:
                 adiciona(*registro, i);
                 i++;
@@ -40,6 +40,6 @@ int main() {
             case 3:
                 sair = 1;
                 break;
-        } 
+        }
    }
 }
