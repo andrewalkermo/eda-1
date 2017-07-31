@@ -1,0 +1,10 @@
+Deleção de nó em árvore de busca binária
+
+A partir do código de árvore de busca binária do Deitel,
+implemente um programa que gera uma árvore aleatória de 20 nós,
+imprima ela com o algoritmo da tarefa de impressão já disponibilizada,
+peça ao usuário um índice de um nó para ser removido, remova o nó
+mantendo a consistência da árvore de busca binária e imprima a árvore novamente.
+As operações de impressão e remoção devem ser funções no programa. Não use variáveis globais.
+
+Envie aqui seu arquivo.c e o arquivo executável no windows.

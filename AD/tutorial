@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "=============================================================="
+echo "01 - instalando o MinGW"
+echo "=============================================================="
+# 01 - instalar o MinGW
+sudo apt-get install mingw-w64
+echo "=============================================================="
+echo "Baixando Atom"
+echo "=============================================================="
+wget https://https://atom.io/download/deb
+echo "=============================================================="
+echo "Instalando Atom"
+echo "=============================================================="
+sudo apt-get install ./atom-amd64.deb
+echo "=============================================================="
+echo "Copiando configuração do Atom"
+echo "=============================================================="
+cp config.cson ~/.atom/
+echo "=============================================================="
+echo "Instalando packages do Atom"
+echo "=============================================================="
+apm install --packages-file package.list
+# apm list --installed --bare > ./package.list

@@ -11,7 +11,10 @@ while [[ 1=1 ]]; do
 	fi
 	echo "Executando" $arquivo".c:"
 	echo "---------------------------------------------------"
-	gcc -x c $arquivo.c -o $arquivo.exe && ./$arquivo.exe
+	# i686-w64-mingw32-gcc -x c $arquivo.c -o $arquivo"_x86.exe"
+	x86_64-w64-mingw32-gcc -x c $arquivo.c -o $arquivo"_x64.exe"
+	gcc -x c $arquivo.c -o $arquivo.tmp && ./$arquivo.tmp
+	find . -name "*.tmp" -exec rm -rf {} \;
 	echo "---------------------------------------------------"
 	echo "Tecle '0' para excolher outro arquivo."
 	echo "Tecle 'q' para sair."
