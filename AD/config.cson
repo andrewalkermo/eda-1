@@ -1,6 +1,8 @@
 "*":
   core:
     telemetryConsent: "limited"
+  editor:
+    tabLength: 4
   "exception-reporting":
     userId: "11aae2cf-edbb-48c8-8f71-919f8cbc3b44"
   "linter-ui-default":

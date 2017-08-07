@@ -2,20 +2,28 @@
 echo "=============================================================="
 echo "01 - instalando o MinGW"
 echo "=============================================================="
-# 01 - instalar o MinGW
-sudo apt-get install mingw-w64
+    sudo apt-get install mingw-w64
 echo "=============================================================="
-echo "Baixando Atom"
+echo "Verificando se o Atom está instalado"
 echo "=============================================================="
-wget https://https://atom.io/download/deb
-echo "=============================================================="
-echo "Instalando Atom"
-echo "=============================================================="
-sudo apt-get install ./atom-amd64.deb
+    if which -a "atom"
+    then
+        echo "Atom já está instalado."
+    else
+        echo "=============================================================="
+        echo "Baixando Atom"
+        echo "=============================================================="
+        wget https://atom.io/download/deb
+        echo "=============================================================="
+        echo "Instalando Atom"
+        echo "=============================================================="
+        sudo apt-get install ./atom-amd64.deb
+    fi
 echo "=============================================================="
 echo "Copiando configuração do Atom"
 echo "=============================================================="
-cp config.cson ~/.atom/
+    cp config.cson ~/.atom/
+    echo "Copiado com sucesso!"
 echo "=============================================================="
 echo "Instalando packages do Atom"
 echo "=============================================================="
